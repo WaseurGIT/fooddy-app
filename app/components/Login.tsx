@@ -1,14 +1,15 @@
 import AntDesign from "@expo/vector-icons/AntDesign";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
+import { router } from "expo-router";
 import React, { useState } from "react";
 import {
-    KeyboardAvoidingView,
-    Platform,
-    ScrollView,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -140,7 +141,9 @@ const Login = () => {
             <Text className="text-gray-600 text-base">
               Don&apos;t have an account?
             </Text>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => router.replace("/components/Register")}
+            >
               <Text className="text-blue-500 font-bold text-base">Sign Up</Text>
             </TouchableOpacity>
           </View>

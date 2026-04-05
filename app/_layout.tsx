@@ -16,8 +16,12 @@ export default function RootLayout() {
               options={{ title: "Home", headerTitleAlign: "center" }}
             />
             <Stack.Screen
-              name="login"
+              name="components/Login"
               options={{ title: "Login", headerTitleAlign: "center" }}
+            />
+            <Stack.Screen
+              name="components/Register"
+              options={{ title: "Register", headerTitleAlign: "center" }}
             />
             <Stack.Screen
               name="components/Profile"
