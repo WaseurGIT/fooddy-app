@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Cheese Burger",
+    "image": "https://i.ibb.co.com/b5LBZZ3W/image.png",
+    "price": 5.99,
+    "category": "Burger",
+    "rating": 4.5
+  },
+  {
+    "id": 2,
+    "name": "Pepperoni Pizza",
+    "image": "https://i.ibb.co.com/XxJxrNq2/image.png",
+    "price": 8.99,
+    "category": "Pizza",
+    "rating": 4.7
+  },
+  {
+    "id": 3,
+    "name": "Fried Chicken",
+    "image": "https://i.ibb.co.com/394VRKtN/image.png",
+    "price": 6.49,
+    "category": "Chicken",
+    "rating": 4.6
+  },
+  {
+    "id": 4,
+    "name": "Pasta Alfredo",
+    "image": "https://i.ibb.co.com/pBnP3QdS/image.png",
+    "price": 7.99,
+    "category": "Pasta",
+    "rating": 4.4
+  },
+  {
+    "id": 5,
+    "name": "Grilled Sandwich",
+    "image": "https://i.ibb.co.com/ks9WPjzX/image.png",
+    "price": 4.99,
+    "category": "Sandwich",
+    "rating": 4.2
+  },
+  {
+    "id": 6,
+    "name": "French Fries",
+    "image": "https://i.ibb.co.com/Tx82QLjT/image.png",
+    "price": 2.99,
+    "category": "Fries",
+    "rating": 4.3
+  },
+  {
+    "id": 7,
+    "name": "Chocolate Cake",
+    "image": "https://i.ibb.co.com/MxyjjChG/image.png",
+    "price": 3.99,
+    "category": "Dessert",
+    "rating": 4.8
+  },
+  {
+    "id": 8,
+    "name": "Ice Cream",
+    "image": "https://i.ibb.co.com/39W7LgvP/image.png",
+    "price": 2.49,
+    "category": "Dessert",
+    "rating": 4.6
+  },
+  {
+    "id": 9,
+    "name": "Steak",
+    "image": "https://i.ibb.co.com/YBWWpMwg/image.png",
+    "price": 12.99,
+    "category": "Meat",
+    "rating": 4.7
+  },
+  {
+    "id": 10,
+    "name": "Sushi",
+    "image": "https://i.ibb.co.com/Gf7yKx9d/image.png",
+    "price": 10.99,
+    "category": "Seafood",
+    "rating": 4.5
+  }
+]
