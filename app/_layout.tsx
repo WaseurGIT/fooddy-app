@@ -1,24 +1,42 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
+// import { Stack } from "expo-router";
+// import "../global.css";
+// export default function RootLayout() {
+//   return (
+//     <Stack>
+//       {" "}
+//       <Stack.Screen name="index" options={{ title: "Home" }} />{" "}
+//       <Stack.Screen
+//         name="components/Profile"
+//         options={{ title: "Profile", headerTitleAlign: "center" }}
+//       />{" "}
+//     </Stack>
+//   );
+// }
 
-import { useColorScheme } from '@/hooks/use-color-scheme';
-
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
+import { Stack } from "expo-router";
+import { View } from "react-native";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import Navbar from "./components/Navbar";
+import "../global.css";
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <SafeAreaProvider>
+      <View className="flex-1">
+        <View className="flex-1">
+          <Stack>
+            <Stack.Screen name="index" options={{ title: "Home" }} />
+            <Stack.Screen
+              name="components/Profile"
+              options={{ title: "Profile" }}
+            />
+          </Stack>
+        </View>
+
+        <SafeAreaView edges={["bottom"]} className="bg-white shadow-md">
+          <Navbar />
+        </SafeAreaView>
+      </View>
+    </SafeAreaProvider>
   );
 }
