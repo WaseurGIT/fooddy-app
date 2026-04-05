@@ -1,13 +1,11 @@
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { Text, View } from "react-native";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "react-native-safe-area-context";
 import Navbar from "./components/Navbar";
-import { StatusBar } from "expo-status-bar";
 
 export default function Index() {
   return (
     <SafeAreaView className="flex-1" edges={["top"]}>
-      <StatusBar style="dark" hidden={false} />
       <View className="flex-row items-center justify-between gap-3 my-3 mx-5">
         <View>
           <Text className="text-xl font-semibold">
@@ -24,6 +22,10 @@ export default function Index() {
       </View>
 
       <View className="flex-1"></View>
+
+      <SafeAreaView edges={["bottom"]} className="">
+        <Navbar />
+      </SafeAreaView>
     </SafeAreaView>
   );
 }

@@ -1,41 +1,26 @@
-// import { Stack } from "expo-router";
-// import "../global.css";
-// export default function RootLayout() {
-//   return (
-//     <Stack>
-//       {" "}
-//       <Stack.Screen name="index" options={{ title: "Home" }} />{" "}
-//       <Stack.Screen
-//         name="components/Profile"
-//         options={{ title: "Profile", headerTitleAlign: "center" }}
-//       />{" "}
-//     </Stack>
-//   );
-// }
-
 import { Stack } from "expo-router";
 import { View } from "react-native";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import Navbar from "./components/Navbar";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import "../global.css";
+import { StatusBar } from "expo-status-bar";
 
 export default function RootLayout() {
   return (
     <SafeAreaProvider>
       <View className="flex-1">
         <View className="flex-1">
+          <StatusBar style="dark" hidden={false} />
           <Stack>
-            <Stack.Screen name="index" options={{ title: "Home" }} />
+            <Stack.Screen
+              name="index"
+              options={{ title: "Home", headerTitleAlign: "center" }}
+            />
             <Stack.Screen
               name="components/Profile"
-              options={{ title: "Profile" }}
+              options={{ title: "Profile", headerTitleAlign: "center" }}
             />
           </Stack>
         </View>
-
-        <SafeAreaView edges={["bottom"]} className="bg-white shadow-md">
-          <Navbar />
-        </SafeAreaView>
       </View>
     </SafeAreaProvider>
   );
